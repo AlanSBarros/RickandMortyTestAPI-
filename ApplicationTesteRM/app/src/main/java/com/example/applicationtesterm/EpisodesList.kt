@@ -39,6 +39,11 @@ class EpisodesList : Activity() {
         Log.d("recycle", "initList")
         adapter = EpisodesAdapter(layoutInflater)
         binding.epList.adapter = adapter
+
+
+        Glide.with(this).load(SelectionActivity.portalGif).into(binding.imgEpisodios)
+
+
         binding.epList.addOnScrollListener(object : RecyclerView.OnScrollListener(){
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
